@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		846B838517DB283F0070F0F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838417DB283F0070F0F6 /* UIKit.framework */; };
+		846B838717DB283F0070F0F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838617DB283F0070F0F6 /* Foundation.framework */; };
+		846B838917DB283F0070F0F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838817DB283F0070F0F6 /* CoreGraphics.framework */; };
+		846B838F17DB283F0070F0F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846B838D17DB283F0070F0F6 /* InfoPlist.strings */; };
+		846B839117DB283F0070F0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B839017DB283F0070F0F6 /* main.m */; };
+		846B839517DB283F0070F0F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B839417DB283F0070F0F6 /* AppDelegate.m */; };
+		846B839717DB283F0070F0F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B839617DB283F0070F0F6 /* Default.png */; };
+		846B839917DB283F0070F0F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B839817DB283F0070F0F6 /* Default@2x.png */; };
+		846B839B17DB283F0070F0F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B839A17DB283F0070F0F6 /* Default-568h@2x.png */; };
+		846B839E17DB283F0070F0F6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */; };
+		846B83A117DB283F0070F0F6 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83A017DB283F0070F0F6 /* MasterViewController.m */; };
+		846B83A417DB283F0070F0F6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83A317DB283F0070F0F6 /* DetailViewController.m */; };
+		846B83AC17DB283F0070F0F6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B83AB17DB283F0070F0F6 /* SenTestingKit.framework */; };
+		846B83AD17DB283F0070F0F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838417DB283F0070F0F6 /* UIKit.framework */; };
+		846B83AE17DB283F0070F0F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838617DB283F0070F0F6 /* Foundation.framework */; };
+		846B83B617DB283F0070F0F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846B83B417DB283F0070F0F6 /* InfoPlist.strings */; };
+		846B83B917DB283F0070F0F6 /* SponsorPayChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83B817DB283F0070F0F6 /* SponsorPayChallengeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		846B83AF17DB283F0070F0F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 846B837917DB283F0070F0F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 846B838017DB283F0070F0F6;
+			remoteInfo = SponsorPayChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		846B838117DB283F0070F0F6 /* SponsorPayChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SponsorPayChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		846B838417DB283F0070F0F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		846B838617DB283F0070F0F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		846B838817DB283F0070F0F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		846B838C17DB283F0070F0F6 /* SponsorPayChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SponsorPayChallenge-Info.plist"; sourceTree = "<group>"; };
+		846B838E17DB283F0070F0F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		846B839017DB283F0070F0F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		846B839217DB283F0070F0F6 /* SponsorPayChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SponsorPayChallenge-Prefix.pch"; sourceTree = "<group>"; };
+		846B839317DB283F0070F0F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		846B839417DB283F0070F0F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		846B839617DB283F0070F0F6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		846B839817DB283F0070F0F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		846B839A17DB283F0070F0F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		846B839D17DB283F0070F0F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		846B839F17DB283F0070F0F6 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		846B83A017DB283F0070F0F6 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		846B83A217DB283F0070F0F6 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		846B83A317DB283F0070F0F6 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		846B83AA17DB283F0070F0F6 /* SponsorPayChallengeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SponsorPayChallengeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		846B83AB17DB283F0070F0F6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		846B83B317DB283F0070F0F6 /* SponsorPayChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SponsorPayChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		846B83B517DB283F0070F0F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		846B83B717DB283F0070F0F6 /* SponsorPayChallengeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SponsorPayChallengeTests.h; sourceTree = "<group>"; };
+		846B83B817DB283F0070F0F6 /* SponsorPayChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SponsorPayChallengeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		846B837E17DB283F0070F0F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846B838517DB283F0070F0F6 /* UIKit.framework in Frameworks */,
+				846B838717DB283F0070F0F6 /* Foundation.framework in Frameworks */,
+				846B838917DB283F0070F0F6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846B83A617DB283F0070F0F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846B83AC17DB283F0070F0F6 /* SenTestingKit.framework in Frameworks */,
+				846B83AD17DB283F0070F0F6 /* UIKit.framework in Frameworks */,
+				846B83AE17DB283F0070F0F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		846B837817DB283F0070F0F6 = {
+			isa = PBXGroup;
+			children = (
+				846B838A17DB283F0070F0F6 /* SponsorPayChallenge */,
+				846B83B117DB283F0070F0F6 /* SponsorPayChallengeTests */,
+				846B838317DB283F0070F0F6 /* Frameworks */,
+				846B838217DB283F0070F0F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		846B838217DB283F0070F0F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				846B838117DB283F0070F0F6 /* SponsorPayChallenge.app */,
+				846B83AA17DB283F0070F0F6 /* SponsorPayChallengeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		846B838317DB283F0070F0F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				846B838417DB283F0070F0F6 /* UIKit.framework */,
+				846B838617DB283F0070F0F6 /* Foundation.framework */,
+				846B838817DB283F0070F0F6 /* CoreGraphics.framework */,
+				846B83AB17DB283F0070F0F6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		846B838A17DB283F0070F0F6 /* SponsorPayChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				846B839317DB283F0070F0F6 /* AppDelegate.h */,
+				846B839417DB283F0070F0F6 /* AppDelegate.m */,
+				846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */,
+				846B839F17DB283F0070F0F6 /* MasterViewController.h */,
+				846B83A017DB283F0070F0F6 /* MasterViewController.m */,
+				846B83A217DB283F0070F0F6 /* DetailViewController.h */,
+				846B83A317DB283F0070F0F6 /* DetailViewController.m */,
+				846B838B17DB283F0070F0F6 /* Supporting Files */,
+			);
+			path = SponsorPayChallenge;
+			sourceTree = "<group>";
+		};
+		846B838B17DB283F0070F0F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				846B838C17DB283F0070F0F6 /* SponsorPayChallenge-Info.plist */,
+				846B838D17DB283F0070F0F6 /* InfoPlist.strings */,
+				846B839017DB283F0070F0F6 /* main.m */,
+				846B839217DB283F0070F0F6 /* SponsorPayChallenge-Prefix.pch */,
+				846B839617DB283F0070F0F6 /* Default.png */,
+				846B839817DB283F0070F0F6 /* Default@2x.png */,
+				846B839A17DB283F0070F0F6 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		846B83B117DB283F0070F0F6 /* SponsorPayChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				846B83B717DB283F0070F0F6 /* SponsorPayChallengeTests.h */,
+				846B83B817DB283F0070F0F6 /* SponsorPayChallengeTests.m */,
+				846B83B217DB283F0070F0F6 /* Supporting Files */,
+			);
+			path = SponsorPayChallengeTests;
+			sourceTree = "<group>";
+		};
+		846B83B217DB283F0070F0F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				846B83B317DB283F0070F0F6 /* SponsorPayChallengeTests-Info.plist */,
+				846B83B417DB283F0070F0F6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		846B838017DB283F0070F0F6 /* SponsorPayChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846B83BC17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallenge" */;
+			buildPhases = (
+				846B837D17DB283F0070F0F6 /* Sources */,
+				846B837E17DB283F0070F0F6 /* Frameworks */,
+				846B837F17DB283F0070F0F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SponsorPayChallenge;
+			productName = SponsorPayChallenge;
+			productReference = 846B838117DB283F0070F0F6 /* SponsorPayChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		846B83A917DB283F0070F0F6 /* SponsorPayChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846B83BF17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallengeTests" */;
+			buildPhases = (
+				846B83A517DB283F0070F0F6 /* Sources */,
+				846B83A617DB283F0070F0F6 /* Frameworks */,
+				846B83A717DB283F0070F0F6 /* Resources */,
+				846B83A817DB283F0070F0F6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846B83B017DB283F0070F0F6 /* PBXTargetDependency */,
+			);
+			name = SponsorPayChallengeTests;
+			productName = SponsorPayChallengeTests;
+			productReference = 846B83AA17DB283F0070F0F6 /* SponsorPayChallengeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		846B837917DB283F0070F0F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Viktor Shcherban";
+			};
+			buildConfigurationList = 846B837C17DB283F0070F0F6 /* Build configuration list for PBXProject "SponsorPayChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 846B837817DB283F0070F0F6;
+			productRefGroup = 846B838217DB283F0070F0F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				846B838017DB283F0070F0F6 /* SponsorPayChallenge */,
+				846B83A917DB283F0070F0F6 /* SponsorPayChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		846B837F17DB283F0070F0F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846B838F17DB283F0070F0F6 /* InfoPlist.strings in Resources */,
+				846B839717DB283F0070F0F6 /* Default.png in Resources */,
+				846B839917DB283F0070F0F6 /* Default@2x.png in Resources */,
+				846B839B17DB283F0070F0F6 /* Default-568h@2x.png in Resources */,
+				846B839E17DB283F0070F0F6 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846B83A717DB283F0070F0F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846B83B617DB283F0070F0F6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		846B83A817DB283F0070F0F6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		846B837D17DB283F0070F0F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846B839117DB283F0070F0F6 /* main.m in Sources */,
+				846B839517DB283F0070F0F6 /* AppDelegate.m in Sources */,
+				846B83A117DB283F0070F0F6 /* MasterViewController.m in Sources */,
+				846B83A417DB283F0070F0F6 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846B83A517DB283F0070F0F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846B83B917DB283F0070F0F6 /* SponsorPayChallengeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		846B83B017DB283F0070F0F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 846B838017DB283F0070F0F6 /* SponsorPayChallenge */;
+			targetProxy = 846B83AF17DB283F0070F0F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		846B838D17DB283F0070F0F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846B838E17DB283F0070F0F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846B839D17DB283F0070F0F6 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		846B83B417DB283F0070F0F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846B83B517DB283F0070F0F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		846B83BA17DB283F0070F0F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		846B83BB17DB283F0070F0F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		846B83BD17DB283F0070F0F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SponsorPayChallenge/SponsorPayChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		846B83BE17DB283F0070F0F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SponsorPayChallenge/SponsorPayChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		846B83C017DB283F0070F0F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SponsorPayChallenge.app/SponsorPayChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SponsorPayChallengeTests/SponsorPayChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		846B83C117DB283F0070F0F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SponsorPayChallenge.app/SponsorPayChallenge";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SponsorPayChallengeTests/SponsorPayChallengeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		846B837C17DB283F0070F0F6 /* Build configuration list for PBXProject "SponsorPayChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846B83BA17DB283F0070F0F6 /* Debug */,
+				846B83BB17DB283F0070F0F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846B83BC17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846B83BD17DB283F0070F0F6 /* Debug */,
+				846B83BE17DB283F0070F0F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		846B83BF17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846B83C017DB283F0070F0F6 /* Debug */,
+				846B83C117DB283F0070F0F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 846B837917DB283F0070F0F6 /* Project object */;
+}

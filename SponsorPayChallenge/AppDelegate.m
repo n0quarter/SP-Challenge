@@ -12,7 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Change NavigationBar background
+    if ([[UINavigationBar class]respondsToSelector:@selector(appearance)]) {
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navBar_bg.png"] forBarMetrics:UIBarMetricsDefault];
+    }
+
+    // Hide Status Bar
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     return YES;
 }
 							

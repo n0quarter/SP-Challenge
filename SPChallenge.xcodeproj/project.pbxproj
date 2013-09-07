@@ -13,9 +13,6 @@
 		846B838F17DB283F0070F0F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846B838D17DB283F0070F0F6 /* InfoPlist.strings */; };
 		846B839117DB283F0070F0F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B839017DB283F0070F0F6 /* main.m */; };
 		846B839517DB283F0070F0F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B839417DB283F0070F0F6 /* AppDelegate.m */; };
-		846B839717DB283F0070F0F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B839617DB283F0070F0F6 /* Default.png */; };
-		846B839917DB283F0070F0F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B839817DB283F0070F0F6 /* Default@2x.png */; };
-		846B839B17DB283F0070F0F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B839A17DB283F0070F0F6 /* Default-568h@2x.png */; };
 		846B839E17DB283F0070F0F6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */; };
 		846B83A117DB283F0070F0F6 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83A017DB283F0070F0F6 /* MasterViewController.m */; };
 		846B83A417DB283F0070F0F6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83A317DB283F0070F0F6 /* DetailViewController.m */; };
@@ -24,6 +21,13 @@
 		846B83AE17DB283F0070F0F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838617DB283F0070F0F6 /* Foundation.framework */; };
 		846B83B617DB283F0070F0F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846B83B417DB283F0070F0F6 /* InfoPlist.strings */; };
 		846B83B917DB283F0070F0F6 /* SponsorPayChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83B817DB283F0070F0F6 /* SponsorPayChallengeTests.m */; };
+		846B83F017DB72950070F0F6 /* navBar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83EE17DB72950070F0F6 /* navBar_bg.png */; };
+		846B83F117DB72950070F0F6 /* navBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83EF17DB72950070F0F6 /* navBar_bg@2x.png */; };
+		846B83F317DB72CA0070F0F6 /* SPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83F217DB72CA0070F0F6 /* SPLogo.png */; };
+		846B83F517DB730A0070F0F6 /* SPLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83F417DB730A0070F0F6 /* SPLogo@2x.png */; };
+		846B83FE17DB77DA0070F0F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83FD17DB77DA0070F0F6 /* Default.png */; };
+		846B840017DB77E00070F0F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83FF17DB77E00070F0F6 /* Default@2x.png */; };
+		846B840217DB77E50070F0F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B840117DB77E50070F0F6 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,14 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		846B838117DB283F0070F0F6 /* SponsorPayChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SponsorPayChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		846B838117DB283F0070F0F6 /* SPChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846B838417DB283F0070F0F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		846B838617DB283F0070F0F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		846B838817DB283F0070F0F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		846B838C17DB283F0070F0F6 /* SponsorPayChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SponsorPayChallenge-Info.plist"; sourceTree = "<group>"; };
+		846B838C17DB283F0070F0F6 /* SPChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPChallenge-Info.plist"; sourceTree = "<group>"; };
 		846B838E17DB283F0070F0F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		846B839017DB283F0070F0F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		846B839217DB283F0070F0F6 /* SponsorPayChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SponsorPayChallenge-Prefix.pch"; sourceTree = "<group>"; };
+		846B839217DB283F0070F0F6 /* SPChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPChallenge-Prefix.pch"; sourceTree = "<group>"; };
 		846B839317DB283F0070F0F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		846B839417DB283F0070F0F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		846B839617DB283F0070F0F6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -55,12 +59,19 @@
 		846B83A017DB283F0070F0F6 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		846B83A217DB283F0070F0F6 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		846B83A317DB283F0070F0F6 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		846B83AA17DB283F0070F0F6 /* SponsorPayChallengeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SponsorPayChallengeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		846B83AA17DB283F0070F0F6 /* SPChallengeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPChallengeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846B83AB17DB283F0070F0F6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		846B83B317DB283F0070F0F6 /* SponsorPayChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SponsorPayChallengeTests-Info.plist"; sourceTree = "<group>"; };
+		846B83B317DB283F0070F0F6 /* SPChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		846B83B517DB283F0070F0F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		846B83B717DB283F0070F0F6 /* SponsorPayChallengeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SponsorPayChallengeTests.h; sourceTree = "<group>"; };
 		846B83B817DB283F0070F0F6 /* SponsorPayChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SponsorPayChallengeTests.m; sourceTree = "<group>"; };
+		846B83EE17DB72950070F0F6 /* navBar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBar_bg.png; sourceTree = "<group>"; };
+		846B83EF17DB72950070F0F6 /* navBar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBar_bg@2x.png"; sourceTree = "<group>"; };
+		846B83F217DB72CA0070F0F6 /* SPLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPLogo.png; sourceTree = "<group>"; };
+		846B83F417DB730A0070F0F6 /* SPLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SPLogo@2x.png"; sourceTree = "<group>"; };
+		846B83FD17DB77DA0070F0F6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		846B83FF17DB77E00070F0F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		846B840117DB77E50070F0F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +101,9 @@
 		846B837817DB283F0070F0F6 = {
 			isa = PBXGroup;
 			children = (
+				846B840117DB77E50070F0F6 /* Default-568h@2x.png */,
+				846B83FF17DB77E00070F0F6 /* Default@2x.png */,
+				846B83FD17DB77DA0070F0F6 /* Default.png */,
 				846B838A17DB283F0070F0F6 /* SponsorPayChallenge */,
 				846B83B117DB283F0070F0F6 /* SponsorPayChallengeTests */,
 				846B838317DB283F0070F0F6 /* Frameworks */,
@@ -100,8 +114,8 @@
 		846B838217DB283F0070F0F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				846B838117DB283F0070F0F6 /* SponsorPayChallenge.app */,
-				846B83AA17DB283F0070F0F6 /* SponsorPayChallengeTests.octest */,
+				846B838117DB283F0070F0F6 /* SPChallenge.app */,
+				846B83AA17DB283F0070F0F6 /* SPChallengeTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,10 +149,11 @@
 		846B838B17DB283F0070F0F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				846B838C17DB283F0070F0F6 /* SponsorPayChallenge-Info.plist */,
+				846B83E117DB6EC50070F0F6 /* Images */,
+				846B838C17DB283F0070F0F6 /* SPChallenge-Info.plist */,
 				846B838D17DB283F0070F0F6 /* InfoPlist.strings */,
 				846B839017DB283F0070F0F6 /* main.m */,
-				846B839217DB283F0070F0F6 /* SponsorPayChallenge-Prefix.pch */,
+				846B839217DB283F0070F0F6 /* SPChallenge-Prefix.pch */,
 				846B839617DB283F0070F0F6 /* Default.png */,
 				846B839817DB283F0070F0F6 /* Default@2x.png */,
 				846B839A17DB283F0070F0F6 /* Default-568h@2x.png */,
@@ -159,18 +174,29 @@
 		846B83B217DB283F0070F0F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				846B83B317DB283F0070F0F6 /* SponsorPayChallengeTests-Info.plist */,
+				846B83B317DB283F0070F0F6 /* SPChallengeTests-Info.plist */,
 				846B83B417DB283F0070F0F6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		846B83E117DB6EC50070F0F6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				846B83EE17DB72950070F0F6 /* navBar_bg.png */,
+				846B83EF17DB72950070F0F6 /* navBar_bg@2x.png */,
+				846B83F217DB72CA0070F0F6 /* SPLogo.png */,
+				846B83F417DB730A0070F0F6 /* SPLogo@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		846B838017DB283F0070F0F6 /* SponsorPayChallenge */ = {
+		846B838017DB283F0070F0F6 /* SPChallenge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 846B83BC17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallenge" */;
+			buildConfigurationList = 846B83BC17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SPChallenge" */;
 			buildPhases = (
 				846B837D17DB283F0070F0F6 /* Sources */,
 				846B837E17DB283F0070F0F6 /* Frameworks */,
@@ -180,14 +206,14 @@
 			);
 			dependencies = (
 			);
-			name = SponsorPayChallenge;
+			name = SPChallenge;
 			productName = SponsorPayChallenge;
-			productReference = 846B838117DB283F0070F0F6 /* SponsorPayChallenge.app */;
+			productReference = 846B838117DB283F0070F0F6 /* SPChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		846B83A917DB283F0070F0F6 /* SponsorPayChallengeTests */ = {
+		846B83A917DB283F0070F0F6 /* SPChallengeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 846B83BF17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallengeTests" */;
+			buildConfigurationList = 846B83BF17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SPChallengeTests" */;
 			buildPhases = (
 				846B83A517DB283F0070F0F6 /* Sources */,
 				846B83A617DB283F0070F0F6 /* Frameworks */,
@@ -199,9 +225,9 @@
 			dependencies = (
 				846B83B017DB283F0070F0F6 /* PBXTargetDependency */,
 			);
-			name = SponsorPayChallengeTests;
+			name = SPChallengeTests;
 			productName = SponsorPayChallengeTests;
-			productReference = 846B83AA17DB283F0070F0F6 /* SponsorPayChallengeTests.octest */;
+			productReference = 846B83AA17DB283F0070F0F6 /* SPChallengeTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +239,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Viktor Shcherban";
 			};
-			buildConfigurationList = 846B837C17DB283F0070F0F6 /* Build configuration list for PBXProject "SponsorPayChallenge" */;
+			buildConfigurationList = 846B837C17DB283F0070F0F6 /* Build configuration list for PBXProject "SPChallenge" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -225,8 +251,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				846B838017DB283F0070F0F6 /* SponsorPayChallenge */,
-				846B83A917DB283F0070F0F6 /* SponsorPayChallengeTests */,
+				846B838017DB283F0070F0F6 /* SPChallenge */,
+				846B83A917DB283F0070F0F6 /* SPChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,10 +263,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B838F17DB283F0070F0F6 /* InfoPlist.strings in Resources */,
-				846B839717DB283F0070F0F6 /* Default.png in Resources */,
-				846B839917DB283F0070F0F6 /* Default@2x.png in Resources */,
-				846B839B17DB283F0070F0F6 /* Default-568h@2x.png in Resources */,
 				846B839E17DB283F0070F0F6 /* MainStoryboard.storyboard in Resources */,
+				846B83F017DB72950070F0F6 /* navBar_bg.png in Resources */,
+				846B83F117DB72950070F0F6 /* navBar_bg@2x.png in Resources */,
+				846B83F317DB72CA0070F0F6 /* SPLogo.png in Resources */,
+				846B83F517DB730A0070F0F6 /* SPLogo@2x.png in Resources */,
+				846B83FE17DB77DA0070F0F6 /* Default.png in Resources */,
+				846B840017DB77E00070F0F6 /* Default@2x.png in Resources */,
+				846B840217DB77E50070F0F6 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +325,7 @@
 /* Begin PBXTargetDependency section */
 		846B83B017DB283F0070F0F6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 846B838017DB283F0070F0F6 /* SponsorPayChallenge */;
+			target = 846B838017DB283F0070F0F6 /* SPChallenge */;
 			targetProxy = 846B83AF17DB283F0070F0F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -388,9 +418,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
-				INFOPLIST_FILE = "SponsorPayChallenge/SponsorPayChallenge-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SPChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SponsorPayChallenge/SPChallenge-Info.plist";
+				PRODUCT_NAME = SPChallenge;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -399,9 +429,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
-				INFOPLIST_FILE = "SponsorPayChallenge/SponsorPayChallenge-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SPChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SponsorPayChallenge/SPChallenge-Info.plist";
+				PRODUCT_NAME = SPChallenge;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -416,8 +446,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
-				INFOPLIST_FILE = "SponsorPayChallengeTests/SponsorPayChallengeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SponsorPayChallengeTests/SPChallengeTests-Info.plist";
+				PRODUCT_NAME = SPChallengeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -433,8 +463,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
-				INFOPLIST_FILE = "SponsorPayChallengeTests/SponsorPayChallengeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SponsorPayChallengeTests/SPChallengeTests-Info.plist";
+				PRODUCT_NAME = SPChallengeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -443,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		846B837C17DB283F0070F0F6 /* Build configuration list for PBXProject "SponsorPayChallenge" */ = {
+		846B837C17DB283F0070F0F6 /* Build configuration list for PBXProject "SPChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				846B83BA17DB283F0070F0F6 /* Debug */,
@@ -452,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		846B83BC17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallenge" */ = {
+		846B83BC17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SPChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				846B83BD17DB283F0070F0F6 /* Debug */,
@@ -460,7 +490,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		846B83BF17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SponsorPayChallengeTests" */ = {
+		846B83BF17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SPChallengeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				846B83C017DB283F0070F0F6 /* Debug */,

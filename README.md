@@ -1,4 +1,5 @@
 SP-Challenge
 ============
 
-SP-Challenge
+SponsorPay Challenge by Viktor Shcherban
+

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ParamsList.h"
 #import "DataAPI.h"
+#import "HTTPClient.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <HTTPClientProtocol, UIAlertViewDelegate>
 
 @property (nonatomic, strong) ParamsList *params;
 

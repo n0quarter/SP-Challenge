@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "ParamsList.h"
 
-@interface DataAPI : NSObject
+@interface DataAPI : NSObject 
 
 + (DataAPI*) sharedInstance;
 
 - (ParamsList *) getParams;
 
-- (NSString *) getDataWithParams: (ParamsList *) params;
+// - (NSString *) getDataWithParams: (ParamsList *) params;
 
 @end

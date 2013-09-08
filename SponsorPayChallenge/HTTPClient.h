@@ -11,13 +11,12 @@
 @protocol HTTPClientProtocol
 
 @required
-- (void) getDataDone: (int) httpCode data: (NSData *) data;
+- (void) getDataDone:(int)httpCode data:(NSData *)data signature:(NSString *)signature;
 
 @optional
 - (void) getDataError: (int) httpCode;
 - (void) getDataHttpError: (int) httpCode;
 - (void) getDataAuthLost: (int) httpCode;
-
 @end
 
 

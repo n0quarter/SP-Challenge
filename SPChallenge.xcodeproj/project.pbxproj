@@ -198,7 +198,6 @@
 		846B838A17DB283F0070F0F6 /* SponsorPayChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				8433A42717DCDD4300E9BCCE /* Categories */,
 				846B839317DB283F0070F0F6 /* AppDelegate.h */,
 				846B839417DB283F0070F0F6 /* AppDelegate.m */,
 				846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */,
@@ -209,6 +208,7 @@
 				8433A42217DCAA1E00E9BCCE /* Model */,
 				8433A41517DC9CB800E9BCCE /* API */,
 				8433A42C17DCF74A00E9BCCE /* LIB */,
+				8433A42717DCDD4300E9BCCE /* Categories */,
 				846B838B17DB283F0070F0F6 /* Supporting Files */,
 			);
 			path = SponsorPayChallenge;

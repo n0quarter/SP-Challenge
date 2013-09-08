@@ -19,7 +19,6 @@
 
 @interface DataAPI () {
     PersistencyManager *persistencyManager;
-    HTTPClient *httpClient;
 }
 
 @end
@@ -46,21 +45,12 @@
     self = [super init];
     if (self) {
         persistencyManager = [[PersistencyManager alloc] init];
-        httpClient = [[HTTPClient alloc] init];
+
         
     }
     return self;
 }
 
-#pragma mark - remote server API
-
-- (NSString *) getDataWithParams: (ParamsList *) params
-{
-//    httpClient.verbose = YES;
-    [httpClient getRequest:[NSString stringWithFormat:@"http://api.sponsorpay.com/feed/v1/offers.json?%@", params.sponsorPayUrlWithHash]];
-//    [httpClient postRequest:serverURL body:[params description]];
-    return @"ales gut";
-}
 
 
 

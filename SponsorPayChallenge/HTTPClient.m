@@ -9,7 +9,12 @@
 #import "HTTPClient.h"
 #import "NSString+sha1.h"
 
-@implementation HTTPClient
+@interface HTTPClient () {
+    NSString *signatureHeader;
+}
+
+@end
+@implementation HTTPClient 
 
 - (id)getRequest:(NSString *)url
 {
@@ -54,13 +59,10 @@
     [self.httpData appendData:data];
 }
 
-// -------------------------------------------- тут мы отлавливаем событие редиректа, по которому определяем, успешная ли авторизация.
+// -------------------------------------------- catch redirect
 - (NSURLRequest *)connection: (NSURLConnection *)inConnection willSendRequest: (NSURLRequest *)inRequest redirectResponse: (NSURLResponse *)inRedirectResponse {
-    
     NSString *url = [NSString stringWithString:inRequest.URL.absoluteString];
-    
     if (_verbose) NSLog(@"[HTTPClient] Redirect to '%@'", url);
-    
     return inRequest;
 }
 
@@ -78,15 +80,10 @@
     //        NSLog(@"str = '%@'", str);
     
     
-    
-    // Мы успешно получили данные с сервера - значит сохраняем куки.
-//    [mainLib saveSession];
-    
-    // Возвращаем управление/данные объекту который просил данные с сервера.
-    if ([_delegate respondsToSelector:@selector(getDataDone:data:)]) {
-        [self.delegate getDataDone:_httpCode data:[NSData dataWithData:_httpData]];
+    if ([_delegate respondsToSelector:@selector(getDataDone:data:signature:)]) {
+        [self.delegate getDataDone:_httpCode data:[NSData dataWithData:_httpData] signature:signatureHeader];
     } else {
-        NSLog(@"HTTPClient. [ALARM] delegate doesn't respond do selector getDataDone");
+        NSLog(@"HTTPClient. [ERROR] delegate doesn't respond do selector getDataDone");
     }
 }
 
@@ -99,12 +96,17 @@
     //    NSLog(@"didReceiveResponse %@: %@", [response URL], [(NSHTTPURLResponse*)response allHeaderFields]); // проверка на gzip
     if (_verbose) NSLog(@"[HTTPClient] didReceiveResponse code = '%d'", _httpCode);
 
+    if ([httpResponse respondsToSelector:@selector(allHeaderFields)]) {
+        signatureHeader = [[httpResponse allHeaderFields] objectForKey:@"X-Sponsorpay-Response-Signature"];
+//        NSLog(@"signatureHeader = '%@'", signatureHeader);
+    }
+    
     NSLog(@"[HTTPClient] didReceiveResponse code = '%d'", _httpCode);
     
     if (_httpCode >= 400) {
         
         // сообщаем делегату о ошибке.
-        if ([_delegate respondsToSelector:@selector(getDataHttpError:)]) {
+        if ([self.delegate respondsToSelector:@selector(getDataHttpError:)]) {
             [_delegate getDataHttpError:_httpCode];
         }
         

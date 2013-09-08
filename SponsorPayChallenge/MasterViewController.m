@@ -7,76 +7,111 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
 
+enum {
+    uidFieldTag = 0,
+    apiKeylFieldTag,
+    appIdFieldTag,
+    pub0FieldTag
+};
+
 @interface MasterViewController () {
-    NSMutableArray *_objects;
+    UIBarButtonItem *doneButton;
 }
+@property (nonatomic, strong) ParamsList *allParams;
 @end
 
 @implementation MasterViewController
 
+
+#pragma mark - INIT
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Add SponsorPay logo to NavigationBar
-//    UIImageView *myTitleView =
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SPLogo.png"]];
 
-	// Do any additional setup after loading the view, typically from a nib.
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    // Create Done button for Navigation Bar
+    doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(hideKeyboard)];
     
-
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
+    self.allParams = [[DataAPI sharedInstance] getParams];
+//    allParams = [[DataAPI sharedInstance] getParams];
+    
+    // Set start values
+    self.uidTextFielt.text    = _allParams.uid;
+    self.apiKeyTextField.text = _allParams.apiKey;
+    self.appIdTextField.text  = _allParams.appid;
+    self.pub0TextField.text   = _allParams.pub0;
+    
 }
 
+
+#pragma mark - My stuff
+
+- (void) hideKeyboard {
+    [self.view endEditing:TRUE];
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
+
+
+#pragma mark - UITextField
+// Enter Pressed.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    // go to the next Text Field
+    if (textField.tag < pub0FieldTag) {
+        [[self.view viewWithTag:textField.tag+1] becomeFirstResponder];
+    }
+    // unless we are already on the last Text Field (assuming that pub0 is always last field)
+    // in that case go ask server for data (the same action as we pressed Get Data button)
+    else {
+        [self performSegueWithIdentifier:@"showDetail" sender:self];
+    }
+    return YES;
+}
+
+- (void) textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.navigationItem.rightBarButtonItem = doneButton;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+//    NSLog(@"textFieldDidEndEditing");
+    
+    switch (textField.tag) {
+        case uidFieldTag:
+            _allParams.uid = textField.text;
+            break;
+        case apiKeylFieldTag:
+            _allParams.apiKey = textField.text;
+            break;
+        case appIdFieldTag:
+            _allParams.appid = textField.text;
+            break;
+        case pub0FieldTag:
+            _allParams.pub0 = textField.text;
+            break;
+    }
+}
+
+#pragma mark - prepareForSegue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        [self hideKeyboard];
+        [[segue destinationViewController] setParams:_allParams];
+    }
+}
+
+#pragma mark - other stuff
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - Table View
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-//    return _objects.count;
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-//    NSDate *object = _objects[indexPath.row];
-    
-    cell.textLabel.text = @"test";
-    return cell;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        NSDate *object = _objects[indexPath.row];
-//        [[segue destinationViewController] setDetailItem:object];
-    }
 }
 
 @end

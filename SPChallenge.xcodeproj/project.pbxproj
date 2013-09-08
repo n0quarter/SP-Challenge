@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8433A41C17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */; };
+		8433A41D17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */; };
+		8433A41E17DC9CCE00E9BCCE /* DataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41717DC9CCE00E9BCCE /* DataAPI.m */; };
+		8433A41F17DC9CCE00E9BCCE /* DataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41717DC9CCE00E9BCCE /* DataAPI.m */; };
+		8433A42017DC9CCE00E9BCCE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */; };
+		8433A42117DC9CCE00E9BCCE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */; };
+		8433A42517DCAA4400E9BCCE /* ParamsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42417DCAA4400E9BCCE /* ParamsList.m */; };
+		8433A42617DCAA4400E9BCCE /* ParamsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42417DCAA4400E9BCCE /* ParamsList.m */; };
+		8433A42A17DCDD6100E9BCCE /* NSString+sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42917DCDD6100E9BCCE /* NSString+sha1.m */; };
+		8433A42B17DCDD6100E9BCCE /* NSString+sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42917DCDD6100E9BCCE /* NSString+sha1.m */; };
+		8433A42F17DCF75D00E9BCCE /* mainLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42E17DCF75D00E9BCCE /* mainLib.m */; };
+		8433A43017DCF75D00E9BCCE /* mainLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42E17DCF75D00E9BCCE /* mainLib.m */; };
 		846B838517DB283F0070F0F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838417DB283F0070F0F6 /* UIKit.framework */; };
 		846B838717DB283F0070F0F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838617DB283F0070F0F6 /* Foundation.framework */; };
 		846B838917DB283F0070F0F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838817DB283F0070F0F6 /* CoreGraphics.framework */; };
@@ -41,6 +53,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
+		8433A41717DC9CCE00E9BCCE /* DataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAPI.m; sourceTree = "<group>"; };
+		8433A41817DC9CCE00E9BCCE /* DataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAPI.h; sourceTree = "<group>"; };
+		8433A41917DC9CCE00E9BCCE /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
+		8433A41A17DC9CCE00E9BCCE /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		8433A42317DCAA4400E9BCCE /* ParamsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamsList.h; sourceTree = "<group>"; };
+		8433A42417DCAA4400E9BCCE /* ParamsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamsList.m; sourceTree = "<group>"; };
+		8433A42817DCDD6100E9BCCE /* NSString+sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+sha1.h"; sourceTree = "<group>"; };
+		8433A42917DCDD6100E9BCCE /* NSString+sha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sha1.m"; sourceTree = "<group>"; };
+		8433A42D17DCF75D00E9BCCE /* mainLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainLib.h; sourceTree = "<group>"; };
+		8433A42E17DCF75D00E9BCCE /* mainLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainLib.m; sourceTree = "<group>"; };
 		846B838117DB283F0070F0F6 /* SPChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846B838417DB283F0070F0F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		846B838617DB283F0070F0F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +122,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8433A41517DC9CB800E9BCCE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8433A41817DC9CCE00E9BCCE /* DataAPI.h */,
+				8433A41717DC9CCE00E9BCCE /* DataAPI.m */,
+				8433A41A17DC9CCE00E9BCCE /* HTTPClient.h */,
+				8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */,
+				8433A41917DC9CCE00E9BCCE /* PersistencyManager.h */,
+				8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		8433A42217DCAA1E00E9BCCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8433A42317DCAA4400E9BCCE /* ParamsList.h */,
+				8433A42417DCAA4400E9BCCE /* ParamsList.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8433A42717DCDD4300E9BCCE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8433A42817DCDD6100E9BCCE /* NSString+sha1.h */,
+				8433A42917DCDD6100E9BCCE /* NSString+sha1.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		8433A42C17DCF74A00E9BCCE /* LIB */ = {
+			isa = PBXGroup;
+			children = (
+				8433A42D17DCF75D00E9BCCE /* mainLib.h */,
+				8433A42E17DCF75D00E9BCCE /* mainLib.m */,
+			);
+			name = LIB;
+			sourceTree = "<group>";
+		};
 		846B837817DB283F0070F0F6 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +198,7 @@
 		846B838A17DB283F0070F0F6 /* SponsorPayChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				8433A42717DCDD4300E9BCCE /* Categories */,
 				846B839317DB283F0070F0F6 /* AppDelegate.h */,
 				846B839417DB283F0070F0F6 /* AppDelegate.m */,
 				846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */,
@@ -141,6 +206,9 @@
 				846B83A017DB283F0070F0F6 /* MasterViewController.m */,
 				846B83A217DB283F0070F0F6 /* DetailViewController.h */,
 				846B83A317DB283F0070F0F6 /* DetailViewController.m */,
+				8433A42217DCAA1E00E9BCCE /* Model */,
+				8433A41517DC9CB800E9BCCE /* API */,
+				8433A42C17DCF74A00E9BCCE /* LIB */,
 				846B838B17DB283F0070F0F6 /* Supporting Files */,
 			);
 			path = SponsorPayChallenge;
@@ -309,6 +377,12 @@
 				846B839517DB283F0070F0F6 /* AppDelegate.m in Sources */,
 				846B83A117DB283F0070F0F6 /* MasterViewController.m in Sources */,
 				846B83A417DB283F0070F0F6 /* DetailViewController.m in Sources */,
+				8433A41C17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */,
+				8433A41E17DC9CCE00E9BCCE /* DataAPI.m in Sources */,
+				8433A42017DC9CCE00E9BCCE /* HTTPClient.m in Sources */,
+				8433A42517DCAA4400E9BCCE /* ParamsList.m in Sources */,
+				8433A42A17DCDD6100E9BCCE /* NSString+sha1.m in Sources */,
+				8433A42F17DCF75D00E9BCCE /* mainLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +391,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B83B917DB283F0070F0F6 /* SponsorPayChallengeTests.m in Sources */,
+				8433A41D17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */,
+				8433A41F17DC9CCE00E9BCCE /* DataAPI.m in Sources */,
+				8433A42117DC9CCE00E9BCCE /* HTTPClient.m in Sources */,
+				8433A42617DCAA4400E9BCCE /* ParamsList.m in Sources */,
+				8433A42B17DCDD6100E9BCCE /* NSString+sha1.m in Sources */,
+				8433A43017DCF75D00E9BCCE /* mainLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +497,13 @@
 		846B83BD17DB283F0070F0F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Victor Scherban (28UEGY86A2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SponsorPayChallenge/SPChallenge-Prefix.pch";
 				INFOPLIST_FILE = "SponsorPayChallenge/SPChallenge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = SPChallenge;
+				PROVISIONING_PROFILE = "ECCFD4AC-625B-412A-9E4D-42481FA98AE9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,10 +511,13 @@
 		846B83BE17DB283F0070F0F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Victor Scherban (28UEGY86A2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SponsorPayChallenge/SPChallenge-Prefix.pch";
 				INFOPLIST_FILE = "SponsorPayChallenge/SPChallenge-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = SPChallenge;
+				PROVISIONING_PROFILE = "ECCFD4AC-625B-412A-9E4D-42481FA98AE9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -489,6 +575,7 @@
 				846B83BE17DB283F0070F0F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		846B83BF17DB283F0070F0F6 /* Build configuration list for PBXNativeTarget "SPChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +584,7 @@
 				846B83C117DB283F0070F0F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

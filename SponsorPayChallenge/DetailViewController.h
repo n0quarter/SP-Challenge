@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParamsList.h"
+#import "DataAPI.h"
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (nonatomic, strong) ParamsList *params;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

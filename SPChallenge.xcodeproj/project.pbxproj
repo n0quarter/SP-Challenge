@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841D38CB17DD1BCF00248D7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */; };
+		841D38CC17DD1C4500248D7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */; };
 		8433A41C17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */; };
 		8433A41D17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */; };
 		8433A41E17DC9CCE00E9BCCE /* DataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41717DC9CCE00E9BCCE /* DataAPI.m */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841D38C917DD1BCF00248D7E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
 		8433A41717DC9CCE00E9BCCE /* DataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAPI.m; sourceTree = "<group>"; };
 		8433A41817DC9CCE00E9BCCE /* DataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAPI.h; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841D38C817DD1BC500248D7E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				841D38C917DD1BCF00248D7E /* MBProgressHUD.h */,
+				841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		8433A41517DC9CB800E9BCCE /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 		8433A42C17DCF74A00E9BCCE /* LIB */ = {
 			isa = PBXGroup;
 			children = (
+				841D38C817DD1BC500248D7E /* MBProgressHUD */,
 				8433A42D17DCF75D00E9BCCE /* mainLib.h */,
 				8433A42E17DCF75D00E9BCCE /* mainLib.m */,
 			);
@@ -373,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841D38CC17DD1C4500248D7E /* MBProgressHUD.m in Sources */,
 				846B839117DB283F0070F0F6 /* main.m in Sources */,
 				846B839517DB283F0070F0F6 /* AppDelegate.m in Sources */,
 				846B83A117DB283F0070F0F6 /* MasterViewController.m in Sources */,
@@ -397,6 +412,7 @@
 				8433A42617DCAA4400E9BCCE /* ParamsList.m in Sources */,
 				8433A42B17DCDD6100E9BCCE /* NSString+sha1.m in Sources */,
 				8433A43017DCF75D00E9BCCE /* mainLib.m in Sources */,
+				841D38CB17DD1BCF00248D7E /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

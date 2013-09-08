@@ -18,12 +18,6 @@
 
 - (id)getRequest:(NSString *)url
 {
-    
-    NSLog(@"HTTPClient getRequest. url = '%@'", url);
-//    return nil;
-
-    
-    
     NSURL *getUrl = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
     if (_verbose) NSLog(@"HTTPClient getRequest. url = '%@'", getUrl);
 
@@ -33,9 +27,6 @@
     if (theConnection) {
         self.httpData = [NSMutableData data];
     } else {
-//        UIAlertView *eView = [[UIAlertView alloc]  initWithTitle: @"Error" message:@"Ошибка соединения" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//        [eView show];
-        
         NSLog(@"Connection failed");
     }
 
@@ -45,8 +36,6 @@
 
 - (id)postRequest:(NSString*)url body:(NSString*)body
 {
-    NSLog(@"HTTPClient. url = %@", url);
-    NSLog(@"HTTPClient. body = %@", body);
     return nil;
 }
 
@@ -73,13 +62,6 @@
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
-    //        NSString *answer = [[NSString alloc]  initWithBytes:[myData bytes] length:[myData length] encoding: NSUTF8StringEncoding];
-    //        NSLog(@"answer = '%@'", answer);
-    //        NSLog(@"------------------------------- ALL Ok, we got answer");
-    //        NSString *str = [NSString stringWithString:[answer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-    //        NSLog(@"str = '%@'", str);
-    
-    
     if ([_delegate respondsToSelector:@selector(getDataDone:data:signature:)]) {
         [self.delegate getDataDone:_httpCode data:[NSData dataWithData:_httpData] signature:signatureHeader];
     } else {
@@ -98,63 +80,26 @@
 
     if ([httpResponse respondsToSelector:@selector(allHeaderFields)]) {
         signatureHeader = [[httpResponse allHeaderFields] objectForKey:@"X-Sponsorpay-Response-Signature"];
-//        NSLog(@"signatureHeader = '%@'", signatureHeader);
     }
-    
-    NSLog(@"[HTTPClient] didReceiveResponse code = '%d'", _httpCode);
-    
-    if (_httpCode >= 400) {
         
+    if (_httpCode >= 400) {
         // сообщаем делегату о ошибке.
         if ([self.delegate respondsToSelector:@selector(getDataHttpError:)]) {
             [_delegate getDataHttpError:_httpCode];
         }
-        
-        /*        if (_httpCode == 404) { // эта ошибка возникает, когда неверно указан магазин
-         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ошибка авторизации" message:@"Магазин указан неверно"  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil, nil];
-         [alert show];
-         }
-         else {
-         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ошибка авторизации" message:@"Неправильный логин или пароль"  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil, nil];
-         [alert show];
-         }
-         */
-        
-        // обрываем соединение
-//        [theConnection cancel];
-//        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-        
     }
 }
 
 // --------------------------------------
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error { // --- Ошибочка вышла
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    
-/*
- if ([_delegate respondsToSelector:@selector(getDataError:)]) {
-        [_delegate getDataError:_httpCode];
+
+    if ([self.delegate respondsToSelector:@selector(getDataHttpError:)]) {
+        [_delegate getDataHttpError:_httpCode];
     }
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ошибка соединения" message:@"Нет связи с сервером."  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil, nil];
-    [alert show];
- */
     
     if (_verbose) NSLog(@"err = %@", error);
 }
-
-
-/*- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)space {
- if([[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodServerTrust]) {
- return YES; // Self-signed cert will be accepted
- // Note: it doesn't seem to matter what you return for a proper SSL cert
- //       only self-signed certs
- }
- // If no other authentication is required, return NO for everything else
- // Otherwise maybe YES for NSURLAuthenticationMethodDefault and etc.
- return YES;
- }
- */
-
 
 
 

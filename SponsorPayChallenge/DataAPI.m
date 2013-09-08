@@ -7,8 +7,8 @@
 
 // Class description:
 // This class is singletone for accesing data from PersistencyManager(local storage)
-// and for getting data from remore server
-// Other classes in project don'd need to know where the data coming from.
+// Other classes in project don't need to know where the data coming from.
+
 
 
 #import "DataAPI.h"

@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "NSString+sha1.h"
+#import "MBProgressHUD.h"
 
 @interface DetailViewController () {
     HTTPClient *httpClient;
@@ -21,29 +22,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    // Add SponsorPay logo to NavigationBar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SPLogo.png"]];
 
     [self getDataWithParams:_params];
-    
-//    NSLog(@"params = %@", _params);
 }
 
-#pragma mark - remote server API
 
+#pragma mark - get data from server
 - (void) getDataWithParams: (ParamsList *) params
 {
     httpClient = [[HTTPClient alloc] init];
     httpClient.delegate = self;
-    httpClient.verbose = YES;
+    httpClient.verbose = NO;
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [httpClient getRequest:[NSString stringWithFormat:@"http://api.sponsorpay.com/feed/v1/offers.json?%@", params.sponsorPayUrlWithHash]];
 }
 
+#pragma mark - httpClient delegates
 - (void) getDataDone:(int)httpCode data:(NSData *)data signature:(NSString *)signature
 {
-    NSLog(@"[getDataDone]");
-    NSLog(@"signature = %@", signature);
-    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
     if (httpCode == 200) {
         
@@ -64,13 +64,19 @@
     }
 }
 
-- (void) getDataError: (int) _httpCode {
+
+- (void) getDataError: (int) _httpCode
+{
     NSLog(@"dataAPI. getDataError = %d", _httpCode);
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"JSON parse error" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Connection error" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alert show];
     
 }
+
+#pragma mark - parse JSON
+
 // -------------------------------------------
 - (void) parseJSON: (NSData *) data httpCode:(int)httpCode{
     //    NSLog(@"Stat. parseJSON");
@@ -97,19 +103,7 @@
             if ([code isEqualToString:@"NO_CONTENT"] || httpCode > 200)  {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:code message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [alert show];
-                
             }
-            
-            /*            NSDictionary *month = [jd objectForKey:@"month"];
-             //            NSLog(@"oders = %@", [month objectForKey:@"orders"]);
-             _ordersLabel.text = [NSString stringWithFormat:@"%@", [month objectForKey:@"orders"]];
-             _visitsLabel.text = [NSString stringWithFormat:@"%@", [month objectForKey:@"visits"]];
-             
-             NSDictionary *week = [jd objectForKey:@"week"];
-             _weekOrdersLabel.text = [NSString stringWithFormat:@"%@", [week objectForKey:@"orders"]];
-             _weekVisitsLabel.text = [NSString stringWithFormat:@"%@", [week objectForKey:@"visits"]];
-             */
-            
         } @catch (NSException *e) {
             NSLog(@"EXCEPTION = '%@'", e);
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"JSON parse error" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
@@ -126,7 +120,6 @@
 
 // ------------------------------------------
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

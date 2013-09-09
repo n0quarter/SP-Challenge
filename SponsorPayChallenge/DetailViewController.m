@@ -11,6 +11,8 @@
 #import "MBProgressHUD.h"
 #import "DataAPI.h"
 #import "mainLib.h"
+#import "SPOffer.h"
+#import "OfferCell.h"
 
 @interface DetailViewController () {
     HTTPClient *httpClient;
@@ -37,7 +39,7 @@
 {
     httpClient = [[HTTPClient alloc] init];
     httpClient.delegate = self;
-    httpClient.verbose = NO;
+    httpClient.verbose = YES;
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [httpClient getRequest:[NSString stringWithFormat:@"%@?%@", [[DataAPI sharedInstance] getServerURL], params.sponsorPayUrlWithHash]];
@@ -84,10 +86,9 @@
     
     NSError *jsonError = nil;
 
-#warning use example json
-
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
-    
+
+#warning we can use example json here
 //    NSData* exampleData = [[mainLib jsonExample] dataUsingEncoding:NSUTF8StringEncoding];
 //    id jsonObject = [NSJSONSerialization JSONObjectWithData:exampleData options:kNilOptions error:&jsonError];
     
@@ -111,21 +112,14 @@
             NSArray *jsonOffers = jd[@"offers"];
             if ([jsonOffers isKindOfClass:[NSArray class]]) {
                 
-                
-                // get offers from json asynchronically
+                // get offers from json (asynchronically, becouse some jsons could be pretty big)
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//                    NSLog(@"offers = %@", offers);
-                    NSLog(@"go async...");
-
-                    [self printQueue];
                     NSArray *offers = [self parseOffers:jsonOffers];
                     
                     // update offers in main queue and refresh data on view
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [self printQueue];
-
                         self.offers = offers;
-                        [self reloadData]; 
+                        [self.tableView reloadData];
                     });
                 });
                 
@@ -134,15 +128,19 @@
     }
 }
 
-
 - (NSArray *) parseOffers:(NSArray *)jsonOffers {
+//    nsmu(@"1 = %@", jsonOffers[0]);
+    NSMutableArray *spOffers = [NSMutableArray array];
     
-    NSLog(@"jsonOff = %@", jsonOffers);
-    return jsonOffers;
-}
-
-- (void) reloadData {
-    NSLog(@"reloadData");
+    for (NSDictionary *dict in jsonOffers) {
+        if ([dict isKindOfClass:[NSDictionary class]]) {
+//            NSLog(@"NSDictionary ok");
+            SPOffer *offer = [[SPOffer alloc] initWithDictionary:dict];
+            [spOffers addObject:offer]; 
+        }
+    }
+//    NSLog(@"spOffers = %@", [NSArray arrayWithArray:spOffers]);
+    return [NSArray arrayWithArray:spOffers];
 }
 
 - (void) printQueue
@@ -168,6 +166,42 @@
     self.alertView = nil; // release it
 //    [super dealloc];
 }
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSNumber *height;
+    if (!height) {
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        height = @(cell.bounds.size.height);
+    }
+    return [height floatValue];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.offers.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    SPOffer *offer = self.offers[indexPath.row];
+    [cell initWithOffer:offer];
+    
+    return cell;
+}
+
 
 #pragma mark - other stuff
 - (void)didReceiveMemoryWarning

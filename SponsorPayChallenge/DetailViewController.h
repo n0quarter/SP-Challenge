@@ -11,7 +11,7 @@
 #import "DataAPI.h"
 #import "HTTPClient.h"
 
-@interface DetailViewController : UIViewController <HTTPClientProtocol, UIAlertViewDelegate>
+@interface DetailViewController : UITableViewController <HTTPClientProtocol, UIAlertViewDelegate>
 
 @property (nonatomic, strong) ParamsList *params;
 

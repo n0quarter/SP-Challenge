@@ -48,15 +48,8 @@
     [self.httpData appendData:data];
 }
 
-// -------------------------------------------- catch redirect
-- (NSURLRequest *)connection: (NSURLConnection *)inConnection willSendRequest: (NSURLRequest *)inRequest redirectResponse: (NSURLResponse *)inRedirectResponse {
-    NSString *url = [NSString stringWithString:inRequest.URL.absoluteString];
-    if (_verbose) NSLog(@"[HTTPClient] Redirect to '%@'", url);
-    return inRequest;
-}
-
 // --------------------------------------
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection { // ------ ВСЕ ОК !!!!!!
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection { // ------ ales gut !
     
     if (_verbose) NSLog(@"[HTTPClient] connectionDidFinishLoading");
     
@@ -75,7 +68,7 @@
     
     _httpCode = [httpResponse statusCode];
     
-    //    NSLog(@"didReceiveResponse %@: %@", [response URL], [(NSHTTPURLResponse*)response allHeaderFields]); // проверка на gzip
+    //    NSLog(@"didReceiveResponse %@: %@", [response URL], [(NSHTTPURLResponse*)response allHeaderFields]); // test for gzip
     if (_verbose) NSLog(@"[HTTPClient] didReceiveResponse code = '%d'", _httpCode);
 
     if ([httpResponse respondsToSelector:@selector(allHeaderFields)]) {
@@ -83,7 +76,6 @@
     }
         
     if (_httpCode >= 400) {
-        // сообщаем делегату о ошибке.
         if ([self.delegate respondsToSelector:@selector(getDataHttpError:)]) {
             [_delegate getDataHttpError:_httpCode];
         }
@@ -91,7 +83,7 @@
 }
 
 // --------------------------------------
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error { // --- Ошибочка вышла
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
     if ([self.delegate respondsToSelector:@selector(getDataHttpError:)]) {
@@ -102,6 +94,11 @@
 }
 
 
+- (UIImage*)downloadImage:(NSString*)url
+{
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    return [UIImage imageWithData:data];
+}
 
 
 

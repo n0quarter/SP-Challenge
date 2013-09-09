@@ -21,6 +21,10 @@
 		8433A42B17DCDD6100E9BCCE /* NSString+sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42917DCDD6100E9BCCE /* NSString+sha1.m */; };
 		8433A42F17DCF75D00E9BCCE /* mainLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42E17DCF75D00E9BCCE /* mainLib.m */; };
 		8433A43017DCF75D00E9BCCE /* mainLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42E17DCF75D00E9BCCE /* mainLib.m */; };
+		8445D45F17DE58C400C8A37E /* SPOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D45E17DE58C400C8A37E /* SPOffer.m */; };
+		8445D46017DE58C400C8A37E /* SPOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D45E17DE58C400C8A37E /* SPOffer.m */; };
+		8445D46717DE634300C8A37E /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D46617DE634200C8A37E /* OfferCell.m */; };
+		8445D46817DE634300C8A37E /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D46617DE634200C8A37E /* OfferCell.m */; };
 		846B838517DB283F0070F0F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838417DB283F0070F0F6 /* UIKit.framework */; };
 		846B838717DB283F0070F0F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838617DB283F0070F0F6 /* Foundation.framework */; };
 		846B838917DB283F0070F0F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838817DB283F0070F0F6 /* CoreGraphics.framework */; };
@@ -69,6 +73,10 @@
 		8433A42917DCDD6100E9BCCE /* NSString+sha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+sha1.m"; sourceTree = "<group>"; };
 		8433A42D17DCF75D00E9BCCE /* mainLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainLib.h; sourceTree = "<group>"; };
 		8433A42E17DCF75D00E9BCCE /* mainLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainLib.m; sourceTree = "<group>"; };
+		8445D45D17DE58C400C8A37E /* SPOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPOffer.h; sourceTree = "<group>"; };
+		8445D45E17DE58C400C8A37E /* SPOffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPOffer.m; sourceTree = "<group>"; };
+		8445D46517DE634200C8A37E /* OfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferCell.h; sourceTree = "<group>"; };
+		8445D46617DE634200C8A37E /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferCell.m; sourceTree = "<group>"; };
 		846B838117DB283F0070F0F6 /* SPChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846B838417DB283F0070F0F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		846B838617DB283F0070F0F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +161,8 @@
 			children = (
 				8433A42317DCAA4400E9BCCE /* ParamsList.h */,
 				8433A42417DCAA4400E9BCCE /* ParamsList.m */,
+				8445D45D17DE58C400C8A37E /* SPOffer.h */,
+				8445D45E17DE58C400C8A37E /* SPOffer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -174,6 +184,26 @@
 				8433A42E17DCF75D00E9BCCE /* mainLib.m */,
 			);
 			name = LIB;
+			sourceTree = "<group>";
+		};
+		8445D46917DE641F00C8A37E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8445D46517DE634200C8A37E /* OfferCell.h */,
+				8445D46617DE634200C8A37E /* OfferCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8445D46A17DE643000C8A37E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846B839F17DB283F0070F0F6 /* MasterViewController.h */,
+				846B83A017DB283F0070F0F6 /* MasterViewController.m */,
+				846B83A217DB283F0070F0F6 /* DetailViewController.h */,
+				846B83A317DB283F0070F0F6 /* DetailViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		846B837817DB283F0070F0F6 = {
@@ -215,10 +245,8 @@
 				846B839317DB283F0070F0F6 /* AppDelegate.h */,
 				846B839417DB283F0070F0F6 /* AppDelegate.m */,
 				846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */,
-				846B839F17DB283F0070F0F6 /* MasterViewController.h */,
-				846B83A017DB283F0070F0F6 /* MasterViewController.m */,
-				846B83A217DB283F0070F0F6 /* DetailViewController.h */,
-				846B83A317DB283F0070F0F6 /* DetailViewController.m */,
+				8445D46A17DE643000C8A37E /* Controller */,
+				8445D46917DE641F00C8A37E /* View */,
 				8433A42217DCAA1E00E9BCCE /* Model */,
 				8433A41517DC9CB800E9BCCE /* API */,
 				8433A42C17DCF74A00E9BCCE /* LIB */,
@@ -398,6 +426,8 @@
 				8433A42517DCAA4400E9BCCE /* ParamsList.m in Sources */,
 				8433A42A17DCDD6100E9BCCE /* NSString+sha1.m in Sources */,
 				8433A42F17DCF75D00E9BCCE /* mainLib.m in Sources */,
+				8445D45F17DE58C400C8A37E /* SPOffer.m in Sources */,
+				8445D46717DE634300C8A37E /* OfferCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +443,8 @@
 				8433A42B17DCDD6100E9BCCE /* NSString+sha1.m in Sources */,
 				8433A43017DCF75D00E9BCCE /* mainLib.m in Sources */,
 				841D38CB17DD1BCF00248D7E /* MBProgressHUD.m in Sources */,
+				8445D46017DE58C400C8A37E /* SPOffer.m in Sources */,
+				8445D46817DE634300C8A37E /* OfferCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

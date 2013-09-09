@@ -15,6 +15,6 @@
 
 - (ParamsList *) getParams;
 
-// - (NSString *) getDataWithParams: (ParamsList *) params;
+- (NSString *) getServerURL;
 
 @end

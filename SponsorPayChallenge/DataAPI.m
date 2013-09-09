@@ -13,7 +13,6 @@
 
 #import "DataAPI.h"
 #import "PersistencyManager.h"
-#import "HTTPClient.h"
 
 #define serverURL @"http://api.sponsorpay.com/feed/v1/offers.json"
 
@@ -51,7 +50,10 @@
     return self;
 }
 
-
+- (NSString *) getServerURL
+{
+    return serverURL;
+}
 
 
 #pragma mark - Local storage API

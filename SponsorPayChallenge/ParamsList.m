@@ -10,8 +10,11 @@
 #import "NSString+sha1.h"
 #import "mainLib.h"
 
+#define simulateIP @"192.168.0.1"
+
 // remove deprecated warnings (I have one, because Apple no longer accept apps that access the UDID of a device starting May 1, 2013.
 // proof http://www.macworld.com/article/2031573/apple-sets-may-1-deadline-for-udid-iphone-5-app-changes.html
+// in future use OpenUDID or something
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 @implementation ParamsList
@@ -21,19 +24,25 @@
     self = [super init];
     if (self)
     {
-        _uid = uid;
+        _uid = uid; 
         _apiKey = apiKey;
         _appid = appid;
         _pub0 = pub0;
         
-        // readonly parameters
+        // readonly parameters. just set defaults
         _device_id = [[UIDevice currentDevice] uniqueIdentifier]; // get UDID.
         _locale = [[NSLocale preferredLanguages] objectAtIndex:0]; // get locale
-        _ip = [mainLib getIPAddress]; // device ip
-        _offer_types = @"100,101,102,103,104,112,113"; // got from challenge description
+        #if TARGET_IPHONE_SIMULATOR
+            _ip = simulateIP;
+        #else
+            _ip = [mainLib getIPAddress]; // device ip
+        #endif
+        
+        _offer_types = @"112"; // got from challenge description
     }
-    return self;
+    return self; 
 }
+
 
 // return URL string as described in API documentation (http://developer.sponsorpay.com/docs/mobile/offer-api/)
 - (NSString *) sponsorPayUrlWithHash

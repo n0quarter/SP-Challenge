@@ -17,13 +17,22 @@
     if (self)
     {
 //        NSLog(@"initWithDictionary. = %@", dictionary);
-        _title  = [dictionary[@"title"] stringByReplacingOccurrencesOfString:@" " withString:@""];
-        _teaser = [dictionary[@" teaser "] stringByReplacingOccurrencesOfString:@" " withString:@""];
-        _payout = [dictionary[@"payout"] stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if ([dictionary[@"title"] isKindOfClass:[NSString class]])
+            self.title  = [dictionary[@"title"] stringByReplacingOccurrencesOfString:@" " withString:@""];
+//        NSLog(@"title = '%@'", _title);
 
-        if ([dictionary[@"thumbnail"] isKindOfClass:[NSDictionary class]]) {
-            _thumbnail = dictionary[@"thumbnail"][@"hires"];
-        }
+        if ([dictionary[@"teaser"] isKindOfClass:[NSString class]])
+            self.teaser = [dictionary[@"teaser"] stringByReplacingOccurrencesOfString:@" " withString:@""];
+//        NSLog(@"_teaser = '%@'", _teaser);
+
+        if ([dictionary[@"payout"] isKindOfClass:[NSNumber class]])
+            self.payout = dictionary[@"payout"];
+//        NSLog(@"payout = '%@'", _payout);
+
+        if ([dictionary[@"thumbnail"] isKindOfClass:[NSDictionary class]])
+            self.thumbnail = dictionary[@"thumbnail"][@"hires"];
+//        NSLog(@"thumbnail = '%@'", _thumbnail);
+
     }
     
 //    NSLog(@"_title = %@", _title);

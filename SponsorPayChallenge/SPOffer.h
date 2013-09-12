@@ -12,7 +12,8 @@
 
 - (id)initWithDictionary:(NSDictionary*) dictionary;
 
-@property (nonatomic, strong) NSString *title, *teaser, *thumbnail, *payout;
+@property (nonatomic, strong) NSString *title, *teaser, *thumbnail;
+@property (nonatomic, strong) NSNumber *payout;
 
 @end
 

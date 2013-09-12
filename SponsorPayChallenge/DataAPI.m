@@ -62,18 +62,23 @@
 
 - (void)downloadImage:(NSNotification*)notification
 {
-    OfferCell *cell = notification.userInfo[@"cell"];
-    NSString *coverUrl = notification.userInfo[@"imgUrl"];
+    UIImageView *offerImageView = notification.userInfo[@"offerImageView"];
+    NSString *imgUrl = notification.userInfo[@"imgUrl"];
+    NSLog(@"get image... %@", imgUrl);
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *image = [httpClient downloadImage:coverUrl];
-        
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            if ([cell respondsToSelector:@selector(setThumbnailImage:)]) {
-                [cell setThumbnailImage:image];
-            }
+    offerImageView.image = [persistencyManager getImage:[imgUrl lastPathComponent]];
+
+    if (offerImageView.image == nil) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImage *image = [httpClient downloadImage:imgUrl];
+            
+            dispatch_sync(dispatch_get_main_queue(), ^{
+    //            if ([customImageView respondsToSelector:@selector(setIma:)]) {
+                    offerImageView.image = image;
+                    [persistencyManager saveImage:image filename:[imgUrl lastPathComponent]];
+            });
         });
-    });
+    }
 }
 #pragma mark - Local storage API
 
@@ -82,6 +87,10 @@
     return [persistencyManager getParams];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 
 @end

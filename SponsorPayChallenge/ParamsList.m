@@ -37,6 +37,9 @@
         #else
             _ip = [mainLib getIPAddress]; // device ip
         #endif
+        // hardcode ip and locate to get offers
+        _ip = @"109.235.143.113";
+        _locale = @"DE";
         
         _offer_types = @"112"; // got from challenge description
     }

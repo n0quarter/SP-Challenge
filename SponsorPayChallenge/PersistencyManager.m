@@ -17,6 +17,8 @@
 @interface PersistencyManager () {
     // An dictionary with default parameters
     ParamsList *params;
+    NSMutableDictionary *cachedImages;
+    BOOL storeDataInMemory;
 }
 @end
 
@@ -29,6 +31,9 @@
         
         params = [[ParamsList alloc] initWithUid:@"spiderman" apiKey:@"1c915e3b5d42d05136185030892fbb846c278927" appid:@"2070" pub0:@""];
 //        [self saveParams]; // inplement in future
+        cachedImages = [NSMutableDictionary dictionary];
+        storeDataInMemory = YES; // store data in memory instead of local storage
+        
         }
     return self;
 }
@@ -43,6 +48,28 @@
     // implement in future
 }
 
+- (void)saveImage:(UIImage*)image filename:(NSString*)filename
+{
+
+    if (storeDataInMemory) [cachedImages setObject:image forKey:filename];
+    else 
+    {
+        filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", filename];
+        NSData *data = UIImagePNGRepresentation(image);
+        [data writeToFile:filename atomically:YES];
+    }
+}
+
+- (UIImage*)getImage:(NSString*)filename
+{
+    if (storeDataInMemory) return cachedImages[filename];
+    else
+    {
+        filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", filename];
+        NSData *data = [NSData dataWithContentsOfFile:filename];
+        return [UIImage imageWithData:data];
+    }
+}
 
 
 

@@ -13,7 +13,7 @@
 
 -(void) initWithOffer:(SPOffer *)offer;
 
-@property (weak, nonatomic) IBOutlet UIImageView *customImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *offerImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *teaserLabel;

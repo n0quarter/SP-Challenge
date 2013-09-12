@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		841D38CB17DD1BCF00248D7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */; };
 		841D38CC17DD1C4500248D7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */; };
-		8433A41C17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */; };
-		8433A41D17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */; };
+		8433A41C17DC9CCE00E9BCCE /* PersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistenceManager.m */; };
+		8433A41D17DC9CCE00E9BCCE /* PersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistenceManager.m */; };
 		8433A41E17DC9CCE00E9BCCE /* DataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41717DC9CCE00E9BCCE /* DataAPI.m */; };
 		8433A41F17DC9CCE00E9BCCE /* DataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41717DC9CCE00E9BCCE /* DataAPI.m */; };
 		8433A42017DC9CCE00E9BCCE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */; };
@@ -61,10 +61,10 @@
 /* Begin PBXFileReference section */
 		841D38C917DD1BCF00248D7E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
+		8433A41617DC9CCE00E9BCCE /* PersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceManager.m; sourceTree = "<group>"; };
 		8433A41717DC9CCE00E9BCCE /* DataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAPI.m; sourceTree = "<group>"; };
 		8433A41817DC9CCE00E9BCCE /* DataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAPI.h; sourceTree = "<group>"; };
-		8433A41917DC9CCE00E9BCCE /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
+		8433A41917DC9CCE00E9BCCE /* PersistenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceManager.h; sourceTree = "<group>"; };
 		8433A41A17DC9CCE00E9BCCE /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
 		8433A42317DCAA4400E9BCCE /* ParamsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamsList.h; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 				8433A41717DC9CCE00E9BCCE /* DataAPI.m */,
 				8433A41A17DC9CCE00E9BCCE /* HTTPClient.h */,
 				8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */,
-				8433A41917DC9CCE00E9BCCE /* PersistencyManager.h */,
-				8433A41617DC9CCE00E9BCCE /* PersistencyManager.m */,
+				8433A41917DC9CCE00E9BCCE /* PersistenceManager.h */,
+				8433A41617DC9CCE00E9BCCE /* PersistenceManager.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 				846B839517DB283F0070F0F6 /* AppDelegate.m in Sources */,
 				846B83A117DB283F0070F0F6 /* MasterViewController.m in Sources */,
 				846B83A417DB283F0070F0F6 /* DetailViewController.m in Sources */,
-				8433A41C17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */,
+				8433A41C17DC9CCE00E9BCCE /* PersistenceManager.m in Sources */,
 				8433A41E17DC9CCE00E9BCCE /* DataAPI.m in Sources */,
 				8433A42017DC9CCE00E9BCCE /* HTTPClient.m in Sources */,
 				8433A42517DCAA4400E9BCCE /* ParamsList.m in Sources */,
@@ -436,7 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846B83B917DB283F0070F0F6 /* SponsorPayChallengeTests.m in Sources */,
-				8433A41D17DC9CCE00E9BCCE /* PersistencyManager.m in Sources */,
+				8433A41D17DC9CCE00E9BCCE /* PersistenceManager.m in Sources */,
 				8433A41F17DC9CCE00E9BCCE /* DataAPI.m in Sources */,
 				8433A42117DC9CCE00E9BCCE /* HTTPClient.m in Sources */,
 				8433A42617DCAA4400E9BCCE /* ParamsList.m in Sources */,

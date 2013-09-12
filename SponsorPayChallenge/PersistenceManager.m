@@ -12,9 +12,9 @@
 // becouse this class(PersistencyManager) is not thread safe
 
 
-#import "PersistencyManager.h"
+#import "PersistenceManager.h"
 
-@interface PersistencyManager () {
+@interface PersistenceManager () {
     // An dictionary with default parameters
     ParamsList *params;
     NSMutableDictionary *cachedImages;
@@ -22,7 +22,7 @@
 }
 @end
 
-@implementation PersistencyManager
+@implementation PersistenceManager
 
 - (id)init
 {
@@ -50,11 +50,10 @@
 
 - (void)saveImage:(UIImage*)image filename:(NSString*)filename
 {
-
     if (storeDataInMemory) [cachedImages setObject:image forKey:filename];
     else 
     {
-        filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", filename];
+        filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", [filename lastPathComponent]];
         NSData *data = UIImagePNGRepresentation(image);
         [data writeToFile:filename atomically:YES];
     }
@@ -65,7 +64,7 @@
     if (storeDataInMemory) return cachedImages[filename];
     else
     {
-        filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", filename];
+        filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", [filename lastPathComponent]];
         NSData *data = [NSData dataWithContentsOfFile:filename];
         return [UIImage imageWithData:data];
     }

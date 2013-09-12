@@ -25,47 +25,47 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="6zR-zx-qDA">
-                                                    <rect key="frame" x="20" y="7" width="85" height="85"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="5" y="7" width="85" height="85"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PlB-MM-boy">
-                                                    <rect key="frame" x="113" y="7" width="199" height="26"/>
+                                                    <rect key="frame" x="101" y="7" width="199" height="26"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="teaser" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mz7-FL-f1g">
-                                                    <rect key="frame" x="113" y="38" width="199" height="34"/>
+                                                    <rect key="frame" x="101" y="38" width="199" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.43921568630000002" green="0.45882352939999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="payout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7bz-WF-QXz">
-                                                    <rect key="frame" x="178" y="71" width="134" height="21"/>
+                                                    <rect key="frame" x="166" y="71" width="134" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.43529411759999997" green="0.4549019608" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Payout:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VbV-w0-2DP">
-                                                    <rect key="frame" x="113" y="71" width="57" height="21"/>
+                                                    <rect key="frame" x="101" y="71" width="57" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="gray" id="VeR-f7-6fR">
-                                                    <rect key="frame" x="54" y="38" width="20" height="20"/>
+                                                    <rect key="frame" x="37" y="40" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <outlet property="customImageView" destination="6zR-zx-qDA" id="sRq-aG-81W"/>
                                             <outlet property="indicator" destination="VeR-f7-6fR" id="BCJ-Xv-ZjI"/>
+                                            <outlet property="offerImageView" destination="6zR-zx-qDA" id="vos-a7-np8"/>
                                             <outlet property="payoutLabel" destination="7bz-WF-QXz" id="wri-df-fVs"/>
                                             <outlet property="teaserLabel" destination="mz7-FL-f1g" id="rWH-hQ-6QK"/>
                                             <outlet property="titleLabel" destination="PlB-MM-boy" id="PZL-EY-Fzc"/>
@@ -276,6 +276,30 @@
             <point key="canvasLocation" x="926" y="64"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="apiKeyTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="appIdTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pub0TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="uidTextFielt" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="OfferCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OfferCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="indicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="offerImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="payoutLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="teaserLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -39,7 +39,7 @@
 {
     httpClient = [[HTTPClient alloc] init];
     httpClient.delegate = self;
-    httpClient.verbose = YES;
+    httpClient.verbose = NO;
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [httpClient getRequest:[NSString stringWithFormat:@"%@?%@", [[DataAPI sharedInstance] getServerURL], params.sponsorPayUrlWithHash]];
@@ -71,7 +71,7 @@
 
 - (void) getDataError: (int) _httpCode
 {
-    NSLog(@"dataAPI. getDataError = %d", _httpCode);
+    NSLog(@"getDataError = %d", _httpCode);
 
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self showAlert:@"Error" message:@"Connection error"];
@@ -87,10 +87,6 @@
     NSError *jsonError = nil;
 
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
-
-#warning we can use example json here
-//    NSData* exampleData = [[mainLib jsonExample] dataUsingEncoding:NSUTF8StringEncoding];
-//    id jsonObject = [NSJSONSerialization JSONObjectWithData:exampleData options:kNilOptions error:&jsonError];
     
     if ([jsonObject isKindOfClass:[NSDictionary class]]) {
         NSDictionary *jd = (NSDictionary *)jsonObject;
@@ -197,6 +193,9 @@
     OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     SPOffer *offer = self.offers[indexPath.row];
+    
+//    cell.
+    
     [cell initWithOffer:offer];
     
     return cell;
@@ -206,7 +205,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - other stuff

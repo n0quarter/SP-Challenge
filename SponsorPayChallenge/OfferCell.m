@@ -10,58 +10,41 @@
 
 @implementation OfferCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        NSLog(@"cell Initialization");
-        // Initialization code
-    }
-    return self;
-}
-
 // my custom init with offer
 -(void) initWithOffer:(SPOffer *)offer
 {
-    NSLog(@"cell initWithOffer");
-
+//    NSLog(@"[%d] initWithOffer", num);
     self.titleLabel.text  = offer.title;
     self.teaserLabel.text = offer.teaser;
-    self.payoutLabel.text = [offer.payout stringValue];
+    self.payoutLabel.text = [offer.payout stringValue]; 
     
-    NSLog(@"uiimageview.image = %@", _offerImageView.image);
+//    if (self.offerImageView.image == nil) NSLog(@"_offerImageView.image = nil");
+//    else NSLog(@"_offerImageView.image != nil");
     
-    [_offerImageView addObserver:self forKeyPath:@"image" options:0 context:nil];
+    [self.offerImageView addObserver:self forKeyPath:@"image" options:0 context:nil];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SPDownloadImageNotification"
-                                                        object:self
-                                                      userInfo:@{@"offerImageView":self, @"imgUrl":offer.thumbnail}];
-}
+    //        NSLog(@"[%d] url = %@", num, offer.thumbnail);
+    
+    // download image with DataAPI
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SPDownloadImageNotification"
+                                                            object:self
+                                                          userInfo:@{@"offerImageView":self.offerImageView, @"imgUrl":offer.thumbnail}];
+//    }
+} 
 
 
-/*- (void) setThumbnailImage:(UIImage *)image
+ - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"setThumbnailImage");
-    _customImageView.image = image;
-    [self.indicator stopAnimating];
-}
- */
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    NSLog(@"=== observeValueForKeyPath");
     if ([keyPath isEqualToString:@"image"])
-        NSLog(@"observeValueForKeyPath = image"); 
     {
         [_indicator stopAnimating];
+        [self.offerImageView removeObserver:self forKeyPath:@"image"];
+        
+//        if (self.offerImageView.image == nil) NSLog(@"=== _offerImageView.image = nil");
+//        else NSLog(@"=== _offerImageView.image != nil");
+
     }
 }
 
-- (void)dealloc
-{
-    NSLog(@"cell dealloc");
-#warning solve it later
-//    [_customImageView removeObserver:self forKeyPath:@"image"];
-}
 
 @end

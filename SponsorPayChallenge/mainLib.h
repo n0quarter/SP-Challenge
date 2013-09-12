@@ -11,6 +11,5 @@
 @interface mainLib : NSObject
 
 + (NSString *) getIPAddress;
-+ (NSString *) jsonExample;
 
 @end

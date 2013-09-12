@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ParamsList.h"
 
-@interface PersistencyManager : NSObject
+@interface PersistenceManager : NSObject
 
 - (ParamsList *) getParams;
 - (void) saveParams;

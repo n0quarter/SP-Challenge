@@ -12,14 +12,14 @@
 
 
 #import "DataAPI.h"
-#import "PersistencyManager.h"
+#import "PersistenceManager.h"
 #import "HTTPClient.h"
 #import "OfferCell.h"
 
 #define serverURL @"http://api.sponsorpay.com/feed/v1/offers.json"
 
 @interface DataAPI () {
-    PersistencyManager *persistencyManager;
+    PersistenceManager *persistencyManager;
     HTTPClient *httpClient;
 }
 
@@ -46,7 +46,7 @@
 {
     self = [super init];
     if (self) {
-        persistencyManager = [[PersistencyManager alloc] init];
+        persistencyManager = [[PersistenceManager alloc] init];
         httpClient = [[HTTPClient alloc] init];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downloadImage:) name:@"SPDownloadImageNotification" object:nil];
@@ -64,18 +64,19 @@
 {
     UIImageView *offerImageView = notification.userInfo[@"offerImageView"];
     NSString *imgUrl = notification.userInfo[@"imgUrl"];
-    NSLog(@"get image... %@", imgUrl);
     
-    offerImageView.image = [persistencyManager getImage:[imgUrl lastPathComponent]];
+    // trying to get cached image
+    offerImageView.image = [persistencyManager getImage:imgUrl];
 
+    // if we haven't cached image - then download it using GCD
     if (offerImageView.image == nil) {
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             UIImage *image = [httpClient downloadImage:imgUrl];
-            
+
             dispatch_sync(dispatch_get_main_queue(), ^{
-    //            if ([customImageView respondsToSelector:@selector(setIma:)]) {
-                    offerImageView.image = image;
-                    [persistencyManager saveImage:image filename:[imgUrl lastPathComponent]];
+                offerImageView.image = image;
+                [persistencyManager saveImage:image filename:imgUrl];
             });
         });
     }

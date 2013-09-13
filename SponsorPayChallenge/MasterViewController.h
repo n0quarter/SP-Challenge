@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DataAPI.h"
 
-@interface MasterViewController : UITableViewController <UITextFieldDelegate>
+@interface MasterViewController : UITableViewController <UITextFieldDelegate, UITableViewDelegate>
 
 - (void) hideKeyboard;
 @property (weak, nonatomic) IBOutlet UITextField *uidTextFielt;

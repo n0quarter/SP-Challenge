@@ -12,6 +12,7 @@
 @interface PersistenceManager : NSObject
 
 - (ParamsList *) getParams;
+- (ParamsList *) getStartParams;
 - (void) saveParams;
 
 - (void)saveImage:(UIImage *)image filename:(NSString *)filename;

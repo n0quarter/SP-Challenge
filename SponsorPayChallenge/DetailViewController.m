@@ -73,21 +73,16 @@
 
 - (void) getDataError: (int) _httpCode
 {
-    NSLog(@"getDataError = %d", _httpCode);
-
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self showAlert:@"Error" message:@"Connection error"];
-    
 }
 
 #pragma mark - parse JSON
 
 // -------------------------------------------
 - (void) parseJSON: (NSData *) data httpCode:(int)httpCode{
-    //    NSLog(@"Stat. parseJSON");
     
     NSError *jsonError = nil;
-
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
     
     if ([jsonObject isKindOfClass:[NSDictionary class]]) {
@@ -126,23 +121,20 @@
 }
 
 - (NSArray *) parseOffers:(NSArray *)jsonOffers {
-//    nsmu(@"1 = %@", jsonOffers[0]);
     NSMutableArray *spOffers = [NSMutableArray array];
     
     for (NSDictionary *dict in jsonOffers) {
         if ([dict isKindOfClass:[NSDictionary class]]) {
-//            NSLog(@"NSDictionary ok");
             SPOffer *offer = [[SPOffer alloc] initWithDictionary:dict];
             [spOffers addObject:offer]; 
         }
     }
-//    NSLog(@"spOffers = %@", [NSArray arrayWithArray:spOffers]);
     return [NSArray arrayWithArray:spOffers];
 }
 
-- (void) printQueue
+- (void) printQueue // for debugging
 {
-    dispatch_queue_t me = dispatch_get_current_queue();     /* The queue which currently runs this block */
+    dispatch_queue_t me = dispatch_get_current_queue();     // The queue which currently runs this block
     printf("'%s'\n", dispatch_queue_get_label(me));         // Print the name of the queue
 }
 
@@ -159,9 +151,8 @@
 }
 
 - (void)dealloc {
-    [self.alertView setDelegate:nil]; // this prevents the crash in the event that the alertview is still showing.
-    self.alertView = nil; // release it
-//    [super dealloc];
+    [self.alertView setDelegate:nil];
+    self.alertView = nil;
 }
 
 
@@ -194,8 +185,6 @@
     OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     SPOffer *offer = self.offers[indexPath.row];
-    
-//    cell.
     
     [cell initWithOffer:offer];
     

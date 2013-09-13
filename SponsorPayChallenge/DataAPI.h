@@ -14,6 +14,7 @@
 + (DataAPI*) sharedInstance;
 
 - (ParamsList *) getParams;
+- (ParamsList*)getStartParams;
 
 - (NSString *) getServerURL;
 

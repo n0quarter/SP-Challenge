@@ -29,18 +29,28 @@
     self = [super init];
     if (self) {
         
-        params = [[ParamsList alloc] initWithUid:@"spiderman" apiKey:@"1c915e3b5d42d05136185030892fbb846c278927" appid:@"2070" pub0:@""];
-//        [self saveParams]; // inplement in future
-        cachedImages = [NSMutableDictionary dictionary];
-        storeDataInMemory = YES; // store data in memory instead of local storage
-        
+        [self setStartParams];
         }
     return self;
+}
+
+- (void) setStartParams
+{
+    params = [[ParamsList alloc] initWithUid:@"spiderman" apiKey:@"1c915e3b5d42d05136185030892fbb846c278927" appid:@"2070" pub0:@""];
+    //        [self saveParams]; // inplement in future
+    cachedImages = [NSMutableDictionary dictionary];
+    storeDataInMemory = YES; // store data in memory instead of local storage
 }
 
 
 - (ParamsList *) getParams
 {
+    return params;
+}
+
+- (ParamsList *) getStartParams
+{
+    [self setStartParams];
     return params;
 }
 

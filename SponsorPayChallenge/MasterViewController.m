@@ -36,17 +36,21 @@ enum {
     // Create Done button for Navigation Bar
     doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(hideKeyboard)];
     
-    self.allParams = [[DataAPI sharedInstance] getParams];
-//    allParams = [[DataAPI sharedInstance] getParams];
+    [self setStartValues];
+    
+}
+
+- (void) setStartValues {
+
+    self.allParams = [[DataAPI sharedInstance] getStartParams];
     
     // Set start values
     self.uidTextFielt.text    = _allParams.uid;
     self.apiKeyTextField.text = _allParams.apiKey;
     self.appIdTextField.text  = _allParams.appid;
     self.pub0TextField.text   = _allParams.pub0;
-    
-}
 
+}
 
 #pragma mark - My stuff
 
@@ -115,6 +119,18 @@ enum {
             return NO;
     }
     return YES;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    if (indexPath.section ==2 && indexPath.row == 0) { // Set Defaults Cell
+        // get defaults and reload table
+        [self setStartValues];
+    }
 }
 
 

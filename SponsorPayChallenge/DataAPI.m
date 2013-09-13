@@ -88,6 +88,11 @@
     return [persistencyManager getParams];
 }
 
+- (ParamsList*)getStartParams
+{
+    return [persistencyManager getStartParams];
+}
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

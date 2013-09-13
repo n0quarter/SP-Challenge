@@ -31,6 +31,8 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SPLogo.png"]];
 
     [self getDataWithParams:_params];
+    
+
 }
 
 
@@ -112,13 +114,12 @@
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSArray *offers = [self parseOffers:jsonOffers];
                     
-                    // update offers in main queue and refresh data on view
+                    // update offers in the main queue and refresh data on view
                     dispatch_async(dispatch_get_main_queue(), ^{
                         self.offers = offers;
                         [self.tableView reloadData];
                     });
                 });
-                
             }
         }
     }

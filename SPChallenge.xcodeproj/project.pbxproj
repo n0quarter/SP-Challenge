@@ -7,24 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841D38CB17DD1BCF00248D7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */; };
-		841D38CC17DD1C4500248D7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */; };
+		8422604217E3067300F551C6 /* SPChallengeTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846B83B317DB283F0070F0F6 /* SPChallengeTests-Info.plist */; };
+		8422609517E3181000F551C6 /* SponsorPayChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83B817DB283F0070F0F6 /* SponsorPayChallengeTests.m */; };
+		8422609817E3190800F551C6 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8422609617E3190800F551C6 /* MBProgressHUD.m */; };
 		8433A41C17DC9CCE00E9BCCE /* PersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistenceManager.m */; };
-		8433A41D17DC9CCE00E9BCCE /* PersistenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41617DC9CCE00E9BCCE /* PersistenceManager.m */; };
 		8433A41E17DC9CCE00E9BCCE /* DataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41717DC9CCE00E9BCCE /* DataAPI.m */; };
-		8433A41F17DC9CCE00E9BCCE /* DataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41717DC9CCE00E9BCCE /* DataAPI.m */; };
 		8433A42017DC9CCE00E9BCCE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */; };
-		8433A42117DC9CCE00E9BCCE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A41B17DC9CCE00E9BCCE /* HTTPClient.m */; };
 		8433A42517DCAA4400E9BCCE /* ParamsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42417DCAA4400E9BCCE /* ParamsList.m */; };
-		8433A42617DCAA4400E9BCCE /* ParamsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42417DCAA4400E9BCCE /* ParamsList.m */; };
 		8433A42A17DCDD6100E9BCCE /* NSString+sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42917DCDD6100E9BCCE /* NSString+sha1.m */; };
-		8433A42B17DCDD6100E9BCCE /* NSString+sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42917DCDD6100E9BCCE /* NSString+sha1.m */; };
 		8433A42F17DCF75D00E9BCCE /* mainLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42E17DCF75D00E9BCCE /* mainLib.m */; };
-		8433A43017DCF75D00E9BCCE /* mainLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433A42E17DCF75D00E9BCCE /* mainLib.m */; };
 		8445D45F17DE58C400C8A37E /* SPOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D45E17DE58C400C8A37E /* SPOffer.m */; };
-		8445D46017DE58C400C8A37E /* SPOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D45E17DE58C400C8A37E /* SPOffer.m */; };
 		8445D46717DE634300C8A37E /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D46617DE634200C8A37E /* OfferCell.m */; };
-		8445D46817DE634300C8A37E /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445D46617DE634200C8A37E /* OfferCell.m */; };
 		846B838517DB283F0070F0F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838417DB283F0070F0F6 /* UIKit.framework */; };
 		846B838717DB283F0070F0F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838617DB283F0070F0F6 /* Foundation.framework */; };
 		846B838917DB283F0070F0F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838817DB283F0070F0F6 /* CoreGraphics.framework */; };
@@ -38,7 +31,6 @@
 		846B83AD17DB283F0070F0F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838417DB283F0070F0F6 /* UIKit.framework */; };
 		846B83AE17DB283F0070F0F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846B838617DB283F0070F0F6 /* Foundation.framework */; };
 		846B83B617DB283F0070F0F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846B83B417DB283F0070F0F6 /* InfoPlist.strings */; };
-		846B83B917DB283F0070F0F6 /* SponsorPayChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B83B817DB283F0070F0F6 /* SponsorPayChallengeTests.m */; };
 		846B83F017DB72950070F0F6 /* navBar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83EE17DB72950070F0F6 /* navBar_bg.png */; };
 		846B83F117DB72950070F0F6 /* navBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83EF17DB72950070F0F6 /* navBar_bg@2x.png */; };
 		846B83F317DB72CA0070F0F6 /* SPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83F217DB72CA0070F0F6 /* SPLogo.png */; };
@@ -59,8 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		841D38C917DD1BCF00248D7E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8422609617E3190800F551C6 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8422609717E3190800F551C6 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8433A41617DC9CCE00E9BCCE /* PersistenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceManager.m; sourceTree = "<group>"; };
 		8433A41717DC9CCE00E9BCCE /* DataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAPI.m; sourceTree = "<group>"; };
 		8433A41817DC9CCE00E9BCCE /* DataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAPI.h; sourceTree = "<group>"; };
@@ -134,11 +126,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		841D38C817DD1BC500248D7E /* MBProgressHUD */ = {
+		8422609917E3195600F551C6 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				841D38C917DD1BCF00248D7E /* MBProgressHUD.h */,
-				841D38CA17DD1BCF00248D7E /* MBProgressHUD.m */,
+				8422609617E3190800F551C6 /* MBProgressHUD.m */,
+				8422609717E3190800F551C6 /* MBProgressHUD.h */,
 			);
 			name = MBProgressHUD;
 			sourceTree = "<group>";
@@ -179,7 +171,7 @@
 		8433A42C17DCF74A00E9BCCE /* LIB */ = {
 			isa = PBXGroup;
 			children = (
-				841D38C817DD1BC500248D7E /* MBProgressHUD */,
+				8422609917E3195600F551C6 /* MBProgressHUD */,
 				8433A42D17DCF75D00E9BCCE /* mainLib.h */,
 				8433A42E17DCF75D00E9BCCE /* mainLib.m */,
 			);
@@ -372,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8422604217E3067300F551C6 /* SPChallengeTests-Info.plist in Resources */,
 				846B838F17DB283F0070F0F6 /* InfoPlist.strings in Resources */,
 				846B839E17DB283F0070F0F6 /* MainStoryboard.storyboard in Resources */,
 				846B83F017DB72950070F0F6 /* navBar_bg.png in Resources */,
@@ -415,7 +408,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841D38CC17DD1C4500248D7E /* MBProgressHUD.m in Sources */,
 				846B839117DB283F0070F0F6 /* main.m in Sources */,
 				846B839517DB283F0070F0F6 /* AppDelegate.m in Sources */,
 				846B83A117DB283F0070F0F6 /* MasterViewController.m in Sources */,
@@ -428,6 +420,7 @@
 				8433A42F17DCF75D00E9BCCE /* mainLib.m in Sources */,
 				8445D45F17DE58C400C8A37E /* SPOffer.m in Sources */,
 				8445D46717DE634300C8A37E /* OfferCell.m in Sources */,
+				8422609817E3190800F551C6 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,16 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846B83B917DB283F0070F0F6 /* SponsorPayChallengeTests.m in Sources */,
-				8433A41D17DC9CCE00E9BCCE /* PersistenceManager.m in Sources */,
-				8433A41F17DC9CCE00E9BCCE /* DataAPI.m in Sources */,
-				8433A42117DC9CCE00E9BCCE /* HTTPClient.m in Sources */,
-				8433A42617DCAA4400E9BCCE /* ParamsList.m in Sources */,
-				8433A42B17DCDD6100E9BCCE /* NSString+sha1.m in Sources */,
-				8433A43017DCF75D00E9BCCE /* mainLib.m in Sources */,
-				841D38CB17DD1BCF00248D7E /* MBProgressHUD.m in Sources */,
-				8445D46017DE58C400C8A37E /* SPOffer.m in Sources */,
-				8445D46817DE634300C8A37E /* OfferCell.m in Sources */,
+				8422609517E3181000F551C6 /* SponsorPayChallengeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,13 +557,13 @@
 		846B83C017DB283F0070F0F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SponsorPayChallenge.app/SponsorPayChallenge";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SPChallenge.app/SPChallenge";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SPChallenge-Prefix.pch";
 				INFOPLIST_FILE = "SponsorPayChallengeTests/SPChallengeTests-Info.plist";
 				PRODUCT_NAME = SPChallengeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -590,13 +574,13 @@
 		846B83C117DB283F0070F0F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SponsorPayChallenge.app/SponsorPayChallenge";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SPChallenge.app/SPChallenge";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SponsorPayChallenge/SponsorPayChallenge-Prefix.pch";
+				GCC_PREFIX_HEADER = "SponsorPayChallenge/SPChallenge-Prefix.pch";
 				INFOPLIST_FILE = "SponsorPayChallengeTests/SPChallengeTests-Info.plist";
 				PRODUCT_NAME = SPChallengeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";

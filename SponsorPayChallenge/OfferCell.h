@@ -9,13 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SPOffer.h"
 
-@interface OfferCell : UITableViewCell {
+@interface OfferCell : UITableViewCell 
 
-@public
-int num;
-}
-
--(void) initWithOffer:(SPOffer *)offer;
+- (id) initWithOffer:(SPOffer *)offer;
 
 @property (weak, nonatomic) IBOutlet UIImageView *offerImageView;
 

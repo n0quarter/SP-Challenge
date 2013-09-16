@@ -10,9 +10,13 @@
 #import "ParamsList.h"
 #import "DataAPI.h"
 #import "HTTPClient.h"
+#import "SPJSONParser.h"
 
-@interface DetailViewController : UITableViewController <HTTPClientProtocol, UIAlertViewDelegate>
+@interface DetailViewController : UITableViewController <HTTPClientProtocol, UIAlertViewDelegate, jsonParserProtocol>
 
 @property (nonatomic, strong) ParamsList *params;
+
+- (void) jsonParserError:(NSString *)code message:(NSString *)message;
+- (void) jsonParserDone:(NSArray *)offers;
 
 @end

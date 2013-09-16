@@ -40,6 +40,7 @@
 		846B83FE17DB77DA0070F0F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83FD17DB77DA0070F0F6 /* Default.png */; };
 		846B840017DB77E00070F0F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B83FF17DB77E00070F0F6 /* Default@2x.png */; };
 		846B840217DB77E50070F0F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B840117DB77E50070F0F6 /* Default-568h@2x.png */; };
+		84F958DB17E72B81003ABD58 /* SPJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F958DA17E72B81003ABD58 /* SPJSONParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		846B83FD17DB77DA0070F0F6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		846B83FF17DB77E00070F0F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		846B840117DB77E50070F0F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		84F958D917E72B81003ABD58 /* SPJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPJSONParser.h; sourceTree = "<group>"; };
+		84F958DA17E72B81003ABD58 /* SPJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPJSONParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,7 @@
 				846B839317DB283F0070F0F6 /* AppDelegate.h */,
 				846B839417DB283F0070F0F6 /* AppDelegate.m */,
 				846B839C17DB283F0070F0F6 /* MainStoryboard.storyboard */,
+				84F958DC17E72BB5003ABD58 /* JSONParser */,
 				8445D46A17DE643000C8A37E /* Controller */,
 				8445D46917DE641F00C8A37E /* View */,
 				8433A42217DCAA1E00E9BCCE /* Model */,
@@ -297,6 +301,15 @@
 				846B83F417DB730A0070F0F6 /* SPLogo@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		84F958DC17E72BB5003ABD58 /* JSONParser */ = {
+			isa = PBXGroup;
+			children = (
+				84F958D917E72B81003ABD58 /* SPJSONParser.h */,
+				84F958DA17E72B81003ABD58 /* SPJSONParser.m */,
+			);
+			name = JSONParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +442,7 @@
 				8445D45F17DE58C400C8A37E /* SPOffer.m in Sources */,
 				8445D46717DE634300C8A37E /* OfferCell.m in Sources */,
 				8422609817E3190800F551C6 /* MBProgressHUD.m in Sources */,
+				84F958DB17E72B81003ABD58 /* SPJSONParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

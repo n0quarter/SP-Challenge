@@ -11,25 +11,20 @@
 @implementation OfferCell
 
 // my custom init with offer
--(void) initWithOffer:(SPOffer *)offer
+- (id) initWithOffer:(SPOffer *)offer
 {
-//    NSLog(@"[%d] initWithOffer", num);
     self.titleLabel.text  = offer.title;
     self.teaserLabel.text = offer.teaser;
     self.payoutLabel.text = [offer.payout stringValue]; 
     
-//    if (self.offerImageView.image == nil) NSLog(@"_offerImageView.image = nil");
-//    else NSLog(@"_offerImageView.image != nil");
     
     [self.offerImageView addObserver:self forKeyPath:@"image" options:0 context:nil];
 
-    //        NSLog(@"[%d] url = %@", num, offer.thumbnail);
-    
     // download image with DataAPI
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SPDownloadImageNotification"
                                                             object:self
                                                           userInfo:@{@"offerImageView":self.offerImageView, @"imgUrl":offer.thumbnail}];
-//    }
+    return self;
 } 
 
 
@@ -40,9 +35,6 @@
         [_indicator stopAnimating];
         [self.offerImageView removeObserver:self forKeyPath:@"image"];
         
-//        if (self.offerImageView.image == nil) NSLog(@"=== _offerImageView.image = nil");
-//        else NSLog(@"=== _offerImageView.image != nil");
-
     }
 }
 

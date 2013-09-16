@@ -9,6 +9,8 @@
 #import "HTTPClient.h"
 #import "NSString+sha1.h"
 
+#define timeInterval 30
+
 @interface HTTPClient () {
     NSString *signatureHeader;
 }
@@ -21,7 +23,7 @@
     NSURL *getUrl = [NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
     if (_verbose) NSLog(@"HTTPClient getRequest. url = '%@'", getUrl);
 
-    NSURLRequest * request = [NSURLRequest requestWithURL:getUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:getUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:timeInterval];
     NSURLConnection *theConnection = [NSURLConnection connectionWithRequest:request delegate:self];
 
     if (theConnection) {
@@ -86,11 +88,12 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
-    if ([self.delegate respondsToSelector:@selector(getDataHttpError:)]) {
-        [_delegate getDataHttpError:_httpCode];
+    if ([self.delegate respondsToSelector:@selector(getDataError:)]) {
+        [_delegate getDataError:error.localizedDescription];
     }
     
-    if (_verbose) NSLog(@"err = %@", error);
+    if (_verbose) NSLog(@"[HTTPClient] didFailWithError = %@", error);
+    NSLog(@"error.localizedDescription = %@", error.localizedDescription);
 }
 
 

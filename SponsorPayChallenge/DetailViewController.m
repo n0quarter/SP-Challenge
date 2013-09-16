@@ -70,11 +70,10 @@
     } 
 }
 
-
-- (void) getDataError: (int) _httpCode
+- (void) getDataError:(NSString *)localizedDescription
 {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-    [self showAlert:@"Error" message:@"Connection error"];
+    [self showAlert:@"Connection error" message:localizedDescription];
 }
 
 #pragma mark - parse JSON
@@ -130,7 +129,7 @@
         }
     }
     return [NSArray arrayWithArray:spOffers];
-}
+} 
 
 - (void) printQueue // for debugging
 {

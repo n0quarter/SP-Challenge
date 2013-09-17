@@ -11,7 +11,7 @@
 
 @interface OfferCell : UITableViewCell 
 
-- (id) initWithOffer:(SPOffer *)offer;
+- (id) initWithOffer:(SPOffer *)offer andTag:(int)tag;
 
 @property (weak, nonatomic) IBOutlet UIImageView *offerImageView;
 

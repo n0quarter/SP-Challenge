@@ -139,7 +139,7 @@
     
     SPOffer *offer = self.allOffers[indexPath.row];
     
-    return [cell initWithOffer:offer];
+    return [cell initWithOffer:offer andTag:indexPath.row];
 }
 
 #pragma mark - Table view delegate

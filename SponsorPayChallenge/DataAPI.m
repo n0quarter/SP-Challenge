@@ -64,8 +64,9 @@
 {
     UIImageView *offerImageView = notification.userInfo[@"offerImageView"];
     NSString *imgUrl = notification.userInfo[@"imgUrl"];
+    NSNumber *tag = notification.userInfo[@"tag"];
     
-    // trying to get cached image
+    // trying to get cached image 
     offerImageView.image = [persistencyManager getImage:imgUrl];
 
     // if we haven't cached image - then download it using GCD
@@ -75,7 +76,8 @@
             UIImage *image = [httpClient downloadImage:imgUrl];
 
             dispatch_sync(dispatch_get_main_queue(), ^{
-                offerImageView.image = image;
+                if ([tag intValue] == offerImageView.tag)
+                    offerImageView.image = image;
                 [persistencyManager saveImage:image filename:imgUrl];
             });
         });

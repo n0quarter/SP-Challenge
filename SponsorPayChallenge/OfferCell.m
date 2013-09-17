@@ -11,19 +11,24 @@
 @implementation OfferCell
 
 // my custom init with offer
-- (id) initWithOffer:(SPOffer *)offer
+- (id) initWithOffer:(SPOffer *)offer andTag:(int)tag
 {
+    self.tag = tag;
     self.titleLabel.text  = offer.title;
     self.teaserLabel.text = offer.teaser;
     self.payoutLabel.text = [offer.payout stringValue]; 
     
-    
+    self.offerImageView.tag = tag;
     [self.offerImageView addObserver:self forKeyPath:@"image" options:0 context:nil];
 
     // download image with DataAPI
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SPDownloadImageNotification"
                                                             object:self
-                                                          userInfo:@{@"offerImageView":self.offerImageView, @"imgUrl":offer.thumbnail}];
+                                                          userInfo:@{@"offerImageView":self.offerImageView,
+                                                                     @"imgUrl":offer.thumbnail,
+                                                                     @"tag":[NSNumber numberWithInt:tag]
+                                                                    }];
+
     return self;
 } 
 
